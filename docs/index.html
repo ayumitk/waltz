@@ -15,7 +15,8 @@
 
             <!-- Bootstrapped CSS / JS -->
             <link href="css/style.css" rel="stylesheet">
-            <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.6.1/font/bootstrap-icons.css">
+            <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.0/font/bootstrap-icons.css"
+              media="print" onload="this.media='all'">
             <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
               integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
               crossorigin="anonymous"></script>
@@ -141,9 +142,9 @@
                 <div class="container pt-5">
                   <div class="hero-inner ps-sm-4 text-center text-sm-start">
                     <h1 class="mb-3 mb-sm-5">
-                      <span class="d-block">An Elegant </span>
-                      <span class="d-block">Danceball </span>
-                      <span class="d-block">For All Crypto Users</span>
+                      <span>An Elegant <br></span>
+                      <span>Danceball <br></span>
+                      <span>For All Crypto Users</span>
                     </h1>
                     <div class="text-center">
                       <a href="#" target="_blank" rel="noopener noreferrer" class="btn btn-gradient btn-lg">
@@ -167,13 +168,21 @@
 
                     <h2 class="text-center mb-5">Three Steps in Waltz Economy</h2>
                     <div class="text-center economy__image">
-                      <img loading="lazy" src="images/waltz-economy.png" alt="Three Steps in Waltz Economy image">
+                      <picture>
+                        <source srcset="images/waltz-economy.webp" type="image/webp">
+                        <source srcset="images/waltz-economy.png" type="image/png">
+                        <img loading="lazy" src="images/waltz-economy.png" alt="Three Steps in Waltz Economy image">
+                      </picture>
                     </div>
                     <div class="economy__three-features">
                       <div>
                         <div class="mb-4">
-                          <img loading="lazy" src="images/for-crypto-traders.png" alt="For Crypto Traders image"
-                            class="w-100">
+                          <picture>
+                            <source srcset="images/for-crypto-traders.webp" type="image/webp">
+                            <source srcset="images/for-crypto-traders.png" type="image/png">
+                            <img loading="lazy" src="images/for-crypto-traders.webp" alt="For Crypto Traders image"
+                              class="w-100">
+                          </picture>
                         </div>
                         <h3 class="border-bottom pb-3 mb-3 fs-2">
                           For Crypto Traders
@@ -186,12 +195,18 @@
                           ETH
                           as collateral and borrowing ETH by pledging zETH as collateral.<br>
                           With this mechanism, there is no overcollateralization nor liquidation of collateral.</p>
-                        <a href="#" target="_blank" rel="noopener noreferrer">Learn more</a>
+                        <a href="#" target="_blank" rel="noopener noreferrer">
+                          Learn more <i class="bi bi-arrow-right"></i>
+                        </a>
                       </div>
                       <div>
                         <div class="mb-4">
-                          <img loading="lazy" src="images/for-defi-farmers.png" alt="For DeFi Farmers image"
-                            class="w-100">
+                          <picture>
+                            <source srcset="images/for-defi-farmers.webp" type="image/webp">
+                            <source srcset="images/for-defi-farmers.png" type="image/png">
+                            <img loading="lazy" src="images/for-defi-farmers.png" alt="For DeFi Farmers image"
+                              class="w-100">
+                          </picture>
                         </div>
                         <h3 class="border-bottom pb-3 mb-3 fs-2">
                           For DeFi Farmers
@@ -200,11 +215,18 @@
                         <p>By providing liquidity to zETH and its paired assets of a certain DEX, users receive much
                           more
                           WLZ tokens as a reward. </p>
-                        <a href="#" target="_blank" rel="noopener noreferrer">Learn more</a>
+                        <a href="#" target="_blank" rel="noopener noreferrer">
+                          Learn more <i class="bi bi-arrow-right"></i>
+                        </a>
                       </div>
                       <div>
                         <div class="mb-4">
-                          <img loading="lazy" src="images/for-etj-hodler.png" alt="For ETH HODLer image" class="w-100">
+                          <picture>
+                            <source srcset="images/for-etj-hodler.webp" type="image/webp">
+                            <source srcset="images/for-etj-hodler.png" type="image/png">
+                            <img loading="lazy" src="images/for-etj-hodler.png" alt="For ETH HODLer image"
+                              class="w-100">
+                          </picture>
                         </div>
                         <h3 class="border-bottom pb-3 mb-3 fs-2">
                           For ETH HODLer
@@ -213,7 +235,9 @@
                         <p>Users are able to receive fixed rate interest by paying zETH (or rather staking it) in the
                           contract. The interest of fixed rate bond is relatively high comparing with just holding zETH.
                           The number of fixed rate bond is limited and you need to hold WLZ tokens to purchase it.</p>
-                        <a href="#" target="_blank" rel="noopener noreferrer">Learn more</a>
+                        <a href="#" target="_blank" rel="noopener noreferrer">
+                          Learn more <i class="bi bi-arrow-right"></i>
+                        </a>
                       </div>
                     </div>
                     <div class="economy__governance container-lg d-flex border p-5">
@@ -222,7 +246,9 @@
                         <h3 class="fs-2">Governance</h3>
                         <p>Important aspects such as the parameter or the interests and the interest rate of the fixed
                           rate bond are decided by the governance mechanism of the protocol.</p>
-                        <a href="#" target="_blank" rel="noopener noreferrer">Learn more</a>
+                        <a href="#" target="_blank" rel="noopener noreferrer">
+                          Learn more <i class="bi bi-arrow-right"></i>
+                        </a>
                       </div>
                     </div>
                   </div>
@@ -303,7 +329,7 @@
                 </ul>
                 <div class="text-center">
                   <a href="#" class="btn btn-outline-secondary bt">
-                    Read More
+                    Read More <i class="bi bi-arrow-right fs-5"></i>
                   </a>
                 </div>
               </section>

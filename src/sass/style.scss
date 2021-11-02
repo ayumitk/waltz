@@ -243,9 +243,8 @@ h3 {
 #hero {
   height: calc(100vh - 70px);
   h1 {
-    color: #acb6e5;
-    background: -webkit-linear-gradient(
-      -30deg,
+    background: linear-gradient(
+      130deg,
       #494e37 8%,
       #292018 28%,
       #292018 40%,
@@ -253,6 +252,7 @@ h3 {
     );
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+    color: $secondary;
     span {
       font-size: 150px;
       line-height: 130px;
@@ -275,14 +275,12 @@ h3 {
       }
       &:nth-child(3) {
         font-size: 85px;
-        margin-top: -20px;
+        line-height: 1.25;
         @include media-breakpoint-down(lg) {
           font-size: 70px;
-          margin-top: -10px;
         }
         @include media-breakpoint-down(sm) {
           font-size: 32px;
-          margin-top: -10px;
         }
       }
     }
@@ -354,9 +352,19 @@ h3 {
   }
 }
 
+.webp {
+  #from-the-blog {
+    background-image: url(../images/crumpled-paper.webp);
+  }
+}
+.no-webp {
+  #from-the-blog {
+    background-image: url(../images/crumpled-paper.jpg);
+  }
+}
+
 #from-the-blog {
   background-color: #f0ece1;
-  background-image: url(../images/crumpled-paper.jpg);
   background-repeat: repeat;
   background-size: 50%;
   &::before,
@@ -477,11 +485,21 @@ h3 {
   }
 }
 
+.webp {
+  #shall-we-waltz {
+    background-image: url(../images/card-paper.webp);
+  }
+}
+.no-webp {
+  #shall-we-waltz {
+    background-image: url(../images/card-paper.jpg);
+  }
+}
+
 #shall-we-waltz {
   margin-bottom: 10rem;
   background: #fff;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-  background-image: url(../images/card-paper.jpg);
   background-repeat: repeat;
   background-size: 315px;
 }
