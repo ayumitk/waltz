@@ -107,11 +107,21 @@ $btn-padding-x-lg: 2.5rem;
 @import "../../node_modules/bootstrap/scss/utilities/api";
 // scss-docs-end import-stack
 
+.webp {
+  body {
+    background-image: url(../images/hero-bg.webp);
+  }
+}
+.no-webp {
+  body {
+    background-image: url(../images/hero-bg.jpg);
+  }
+}
+
 body {
   font-weight: 200;
   overflow-x: hidden;
   font-size: 1.125rem;
-  background-image: url(../images/hero-bg.jpg);
   background-position: center top;
   background-repeat: no-repeat;
   background-size: auto 100vh;
