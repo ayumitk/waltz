@@ -1,0 +1,612 @@
+<!doctype html>
+<html lang="en">
+
+
+  
+    
+      
+        
+
+          <head>
+            <!-- Required meta tags -->
+            <meta charset="utf-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1">
+            <meta name="robots" content="index, follow">
+
+            <!-- Bootstrapped CSS / JS -->
+            <link href="css/style.css" rel="stylesheet">
+            <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.6.1/font/bootstrap-icons.css">
+            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+              integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+              crossorigin="anonymous"></script>
+
+            <!-- Web Fonts -->
+            <link rel="preconnect" href="https://fonts.googleapis.com">
+            <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+            <link
+              href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Quattrocento:wght@400;700&display=swap"
+              class="webfont">
+
+            <title>
+              Waltz - An Elegant Danceball for all crypto users
+            </title>
+            <meta name="description" content="A protocol that enables users to take “steps” among three different aspects of crypto just like dancing waltz.">
+
+            <!-- Open Graph Tags -->
+            <meta property="og:title" content="Waltz - An Elegant Danceball for all crypto users" />
+            <meta property="og:type" content="website" />
+            <meta property="og:image" content="https://waltz.com/images/card-image.jpg" />
+            <meta property="og:description" content="A protocol that enables users to take “steps” among three different aspects of crypto just like dancing waltz." />
+            <meta property="og:locale" content="en-US" />
+            <meta property="og:site_name" content="Waltz" />
+            <meta property="og:url" content="https://waltz.com" />
+
+            <!-- Twitter Cards -->
+            <meta name="twitter:card" content="summary_large_image">
+            <meta name="twitter:site" content="@Plasm_Network">
+            <meta name="twitter:title" content="Waltz - An Elegant Danceball for all crypto users">
+            <meta name="twitter:description" content="A protocol that enables users to take “steps” among three different aspects of crypto just like dancing waltz.">
+            <meta name="twitter:image" content="https://waltz.com/images/card-image.jpg">
+            <meta property="twitter:url" content="https://waltz.com" />
+            <meta name="twitter:creator" content="@Plasm_Network">
+
+            <!-- Favicon -->
+            <link rel="apple-touch-icon" sizes="180x180" href="images/favicon/apple-touch-icon.png">
+            <link rel="icon" type="image/png" sizes="32x32" href="images/favicon/favicon-32x32.png">
+            <link rel="icon" type="image/png" sizes="16x16" href="images/favicon/favicon-16x16.png">
+            <link rel="manifest" href="images/favicon/site.webmanifest">
+            <link rel="mask-icon" href="images/favicon/safari-pinned-tab.svg" color="#4d667d">
+            <meta name="msapplication-TileColor" content="#4d667d">
+            <meta name="theme-color" content="#4d667d">
+          </head>
+
+          <body>
+            <svg aria-hidden="true" style="position: absolute; width: 0; height: 0; overflow: hidden;" version="1.1"
+  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <defs>
+
+    <symbol id="brand-logo" viewBox="0 0 160 47" fill="none">
+      <title>Waltz</title>
+      <path
+        d="M46.32 23.16C46.32 27.7406 44.9617 32.2184 42.4169 36.027C39.872 39.8357 36.2549 42.8041 32.023 44.5571C27.791 46.31 23.1343 46.7686 18.6417 45.875C14.1491 44.9814 10.0224 42.7756 6.78341 39.5366C3.54443 36.2976 1.33865 32.1709 0.445021 27.6783C-0.448613 23.1857 0.0100424 18.529 1.76297 14.297C3.51589 10.0651 6.48437 6.44802 10.293 3.90317C14.1017 1.35832 18.5794 3.8147e-06 23.16 3.8147e-06C29.3024 3.8147e-06 35.1933 2.44006 39.5366 6.78341C43.8799 11.1267 46.32 17.0176 46.32 23.16Z"
+        fill="#4D667D" />
+      <path
+        d="M35.0601 24.18L30.28 26.05L27.9501 23.89L26.85 19.53L35.8801 20.86V17.18L29.28 11.75L15.54 10.31L17.4 17.48V21.79L15.59 23.91L11.05 23.31L12.74 25.41L30.71 37.52L31.8 32.63L36.2901 27.15L35.0601 24.18Z"
+        fill="white" />
+      <path d="M29.8 21.8L33.6 22.57L30.57 23.72L29.8 21.8Z" fill="#839FBA" />
+      <path d="M6.33008 24.36L12.7401 25.41L30.7101 37.52L13.0301 30.3L6.33008 24.36Z" fill="#80A4C2" />
+      <path
+        d="M67.9699 28.53C67.9699 25.07 57.9099 25.53 57.9099 18.65C57.9099 15.04 61.0899 12.21 65.6099 12.21C66.8373 12.1467 68.064 12.3468 69.2076 12.797C70.3511 13.2472 71.3851 13.937 72.2399 14.82L69.2399 18.34C68.7607 17.714 68.1429 17.2075 67.435 16.8605C66.727 16.5135 65.9483 16.3353 65.1599 16.34C63.5999 16.34 62.7299 17.21 62.7299 18.34C62.7299 21.86 72.7299 21.34 72.7299 28.27C72.7299 31.54 70.0199 34.72 64.4799 34.72C61.6984 34.847 58.9789 33.8734 56.9099 32.01L59.7199 28.06C60.4172 28.8336 61.26 29.4622 62.2003 29.9101C63.1406 30.3579 64.1598 30.6161 65.1999 30.67C67.0999 30.67 67.9999 29.67 67.9999 28.56"
+        fill="white" />
+      <path
+        d="M89.8699 23.23V34.37H85.45V24.11C85.45 22.35 84.67 21.48 83.17 21.48C82.5848 21.522 82.0193 21.7095 81.5251 22.0256C81.0308 22.3417 80.6234 22.7764 80.3399 23.29V34.37H75.9299V12.21H80.3399V19.52H80.4599C81.027 18.944 81.7047 18.4885 82.4522 18.1809C83.1997 17.8733 84.0017 17.72 84.8099 17.73C88.0299 17.73 89.8699 19.52 89.8699 23.23Z"
+        fill="white" />
+      <path d="M98.2899 17.86H93.8799V34.38H98.2899V17.86Z" fill="white" />
+      <path
+        d="M116.26 34.37H111.84V23.87C111.84 22.18 111.05 21.18 109.56 21.18C108.939 21.1797 108.334 21.3719 107.827 21.7301C107.32 22.0883 106.937 22.5948 106.73 23.18V34.41H102.31V17.85H105.72L106.6 19.4H106.72C107.275 18.7698 107.958 18.2655 108.724 17.9205C109.49 17.5756 110.32 17.3982 111.16 17.4C114.38 17.4 116.22 19.18 116.22 22.9L116.26 34.37Z"
+        fill="white" />
+      <path
+        d="M119.29 26.18C119.29 21.1 121.43 17.56 126.9 17.56C132.6 17.56 134.38 20.95 134.38 26.07C134.38 31.19 132.21 34.69 126.75 34.69C121.08 34.69 119.29 31.3 119.29 26.18ZM126.9 31.24C129.15 31.24 129.85 29.6 129.85 26.24C129.85 22.88 129 21.06 126.72 21.06C124.72 21.06 123.83 22.69 123.83 26.06C123.83 29.43 124.67 31.29 126.9 31.29"
+        fill="white" />
+      <path
+        d="M137.48 12.21H141.83V18.58H141.95C142.913 17.9828 144.026 17.6707 145.16 17.68C148.9 17.68 151.68 19.68 151.68 25.8C151.68 30.8 148.73 34.66 143.23 34.66C141.262 34.7668 139.296 34.4248 137.48 33.66V12.21ZM147.3 26.15C147.3 22.47 146.01 21.3 144.11 21.3C143.699 21.2869 143.291 21.3582 142.909 21.5096C142.527 21.661 142.18 21.8891 141.89 22.18V30.92C142.43 31.0879 142.994 31.1656 143.56 31.15C145.89 31.15 147.3 29.66 147.3 26.15Z"
+        fill="white" />
+      <path d="M159.09 17.86H154.68V34.38H159.09V17.86Z" fill="white" />
+      <path d="M98.2999 13.4L93.8899 11.63V15.61H98.2999V13.4Z" fill="white" />
+      <path d="M159.1 13.4L154.68 11.63V15.61H159.1V13.4Z" fill="white" />
+
+    </symbol>
+
+  </defs>
+</svg>
+
+
+              <header>
+                <div class="container-xl">
+                  <nav class="navbar navbar-expand-lg">
+                    <div class="container-fluid p-0">
+                      <div class="navbar-brand">
+                        <!-- <svg class="brand-logo">
+                          <use xlink:href="#brand-logo"></use>
+                        </svg> -->
+                        <span class="text-secondary fw-bold">LOGO</span>
+                      </div>
+                      <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                      </button>
+                      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav mb-2 mb-lg-0 flex-grow-1 fw-normal">
+                          <li class="nav-item">
+                            <a class="nav-link" href="#">Waltz Economy</a>
+                          </li>
+                          <li class="nav-item">
+                            <a class="nav-link" href="#">Blog</a>
+                          </li>
+                          <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                              data-bs-toggle="dropdown" aria-expanded="false">
+                              Community
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                              <li><a class="dropdown-item" href="#">Twitter</a></li>
+                              <li><a class="dropdown-item" href="#">Discord</a></li>
+                              <li><a class="dropdown-item" href="#">Telegram</a></li>
+                              <li><a class="dropdown-item" href="#">Github</a></li>
+                            </ul>
+                          </li>
+                          <li class="nav-item">
+                            <a class="nav-link" href="#">FAQ</a>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </nav>
+                </div>
+              </header>
+
+              <section id="hero" class="d-flex align-items-center">
+                <div class="container pt-5">
+                  <div class="hero-inner ps-sm-4 text-center text-sm-start">
+                    <h1 class="mb-3 mb-sm-5">
+                      <span class="d-block">An Elegant </span>
+                      <span class="d-block">Danceball </span>
+                      <span class="d-block">For All Crypto Users</span>
+                    </h1>
+                    <div class="text-center">
+                      <a href="#" target="_blank" rel="noopener noreferrer" class="btn btn-gradient btn-lg">
+                        Launch App
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </section>
+
+              <section id="economy" class="gradient-bg">
+                <div class="gradient-bg__inner">
+                  <p class="text-center text-white container-md mb-5">A protocol that enables users to take “steps”
+                    among
+                    three
+                    different
+                    aspects of
+                    crypto just like
+                    dancing waltz.</p>
+                  <div class="container-xl">
+
+                    <h2 class="text-center mb-5">Three Steps in Waltz Economy</h2>
+                    <div class="text-center economy__image">
+                      <img loading="lazy" src="/images/waltz-economy.png" alt="Three Steps in Waltz Economy image">
+                    </div>
+                    <div class="economy__three-features">
+                      <div>
+                        <div class="mb-4">
+                          <img loading="lazy" src="/images/for-crypto-traders.png" alt="For Crypto Traders image"
+                            class="w-100">
+                        </div>
+                        <h3 class="border-bottom pb-3 mb-3 fs-2">
+                          For Crypto Traders
+                          <small class="d-block text-white mt-1 fs-6 fw-normal">Lending
+                            for
+                            Tax
+                            saving</small>
+                        </h3>
+                        <p>Users are able to borrow zETH (wrapped ETH with which holders receive WLZ tokens) by pledging
+                          ETH
+                          as collateral and borrowing ETH by pledging zETH as collateral.<br>
+                          With this mechanism, there is no overcollateralization nor liquidation of collateral.</p>
+                        <a href="#" target="_blank" rel="noopener noreferrer">Learn more</a>
+                      </div>
+                      <div>
+                        <div class="mb-4">
+                          <img loading="lazy" src="/images/for-defi-farmers.png" alt="For DeFi Farmers image"
+                            class="w-100">
+                        </div>
+                        <h3 class="border-bottom pb-3 mb-3 fs-2">
+                          For DeFi Farmers
+                          <small class="d-block text-white mt-1 fs-6 fw-normal">Effective Farming of WALTZ Token</small>
+                        </h3>
+                        <p>By providing liquidity to zETH and its paired assets of a certain DEX, users receive much
+                          more
+                          WLZ tokens as a reward. </p>
+                        <a href="#" target="_blank" rel="noopener noreferrer">Learn more</a>
+                      </div>
+                      <div>
+                        <div class="mb-4">
+                          <img loading="lazy" src="/images/for-etj-hodler.png" alt="For ETH HODLer image" class="w-100">
+                        </div>
+                        <h3 class="border-bottom pb-3 mb-3 fs-2">
+                          For ETH HODLer
+                          <small class="d-block text-white mt-1 fs-6 fw-normal">Fixed Rate Bond</small>
+                        </h3>
+                        <p>Users are able to receive fixed rate interest by paying zETH (or rather staking it) in the
+                          contract. The interest of fixed rate bond is relatively high comparing with just holding zETH.
+                          The number of fixed rate bond is limited and you need to hold WLZ tokens to purchase it.</p>
+                        <a href="#" target="_blank" rel="noopener noreferrer">Learn more</a>
+                      </div>
+                    </div>
+                    <div class="economy__governance container-lg d-flex border p-5">
+                      <div class="me-4">image</div>
+                      <div>
+                        <h3 class="fs-2">Governance</h3>
+                        <p>Important aspects such as the parameter or the interests and the interest rate of the fixed
+                          rate bond are decided by the governance mechanism of the protocol.</p>
+                        <a href="#" target="_blank" rel="noopener noreferrer">Learn more</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </section>
+
+              <section id="status">
+                <div class="status__inner">
+                  <dl class="container-lg status-container mb-0 lh-1">
+                    <div class="d-flex flex-column text-center">
+                      <dt class="order-2 fw-normal text-white fs-5">Unique users</dt>
+                      <dd class="order-1 text-primary mb-3">135,442</dd>
+                    </div>
+                    <div class="d-flex flex-column text-center">
+                      <dt class="order-2 fw-normal text-white fs-5">Unique users</dt>
+                      <dd class="order-1 text-primary mb-3">24,937</dd>
+                    </div>
+                    <div class="d-flex flex-column text-center">
+                      <dt class="order-2 fw-normal text-white fs-5">Unique users</dt>
+                      <dd class="order-1 text-primary mb-3">24,937</dd>
+                    </div>
+                  </dl>
+                </div>
+              </section>
+
+              <section id="from-the-blog">
+                <h2 class="text-center mb-4 mb-sm-5 text-secondary container-xl pt-5">From the Blog</h2>
+                <p class="text-center container-sm text-secondary">Lorem ipsum dolor sit amet consectetur, adipisicing
+                  elit. Ipsa
+                  libero labore natus atque, ducimus sed.</p>
+                <ul class="container-xl my-5 blog-post">
+
+                  <li>
+                    <a href="#" class="d-block p-4">
+                      <div class="blog-post__image mb-4">
+                        <img loading="lazy" src="images/no-image.jpg" alt="blog post image">
+                      </div>
+                      <h3 class="fs-5 text-secondary fw-bold">Boost your conversion rate</h3>
+                      <p class="fs-6 blog-post__description">Lorem ipsum dolor sit amet consectetur
+                        adipisicing elit.
+                        Architecto accusantium
+                        praesentium eius, ut atque fuga culpa, similique sequi cum eos quis dolorum. Architecto
+                        accusantium</p>
+                      <small class="blog-post__date link-light d-block pb-4">Mar 16, 2020 · 6 min read</small>
+                    </a>
+                  </li>
+
+                  <li>
+                    <a href="#" class="d-block p-4">
+                      <div class="blog-post__image mb-4">
+                        <img loading="lazy" src="images/no-image.jpg" alt="blog post image">
+                      </div>
+                      <h3 class="fs-5 text-secondary fw-bold">Boost your conversion rate</h3>
+                      <p class="fs-6 blog-post__description">Lorem ipsum dolor sit amet consectetur
+                        adipisicing elit.
+                        Architecto accusantium
+                        praesentium eius, ut atque fuga culpa, similique sequi cum eos quis dolorum. Architecto
+                        accusantium</p>
+                      <small class="blog-post__date link-light d-block pb-4">Mar 16, 2020 · 6 min read</small>
+                    </a>
+                  </li>
+
+                  <li>
+                    <a href="#" class="d-block p-4">
+                      <div class="blog-post__image mb-4">
+                        <img loading="lazy" src="images/no-image.jpg" alt="blog post image">
+                      </div>
+                      <h3 class="fs-5 text-secondary fw-bold">Boost your conversion rate</h3>
+                      <p class="fs-6 blog-post__description">Lorem ipsum dolor sit amet consectetur
+                        adipisicing elit.
+                        Architecto accusantium
+                        praesentium eius, ut atque fuga culpa, similique sequi cum eos quis dolorum. Architecto
+                        accusantium</p>
+                      <small class="blog-post__date link-light d-block pb-4">Mar 16, 2020 · 6 min read</small>
+                    </a>
+                  </li>
+
+                </ul>
+                <div class="text-center">
+                  <a href="#" class="btn btn-outline-secondary bt">
+                    Read More
+                  </a>
+                </div>
+              </section>
+
+              <div class="gradient-bg">
+                <div class="gradient-bg__inner pb-0">
+
+                  <section id="community" class="d-flex align-items-center">
+                    <div class="container-md">
+                      <h2 class="text-center mb-4 mb-sm-5">Community</h2>
+                      <p class="text-center mb-5">Learn more about Shinobi, chat with the team, others in the community,
+                        and
+                        culpa minim ad dolor do.
+                        Do cupidatat eu excepteur tempor officia. Nostrud dolor nostrud proident magna officia ex ex
+                        ullamco.</p>
+                      <ul class="p-0 m-0">
+                        <li>
+                          <a href="#" target="_blank" rel="noopener noreferrer">
+                            <i class="bi bi-twitter"></i>
+                            <span class="text-white fw-bolder d-block">Twitter</span>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#" target="_blank" rel="noopener noreferrer">
+                            <i class="bi bi-discord"></i>
+                            <span class="text-white fw-bolder d-block">Discord</span>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#" target="_blank" rel="noopener noreferrer">
+                            <i class="bi bi-telegram"></i>
+                            <span class="text-white fw-bolder d-block">Telegram</span>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#" target="_blank" rel="noopener noreferrer">
+                            <i class="bi bi-github"></i>
+                            <span class="text-white fw-bolder d-block">Github</span>
+                          </a>
+                        </li>
+                      </ul>
+                    </div>
+                  </section>
+
+                  <section id="faq">
+                    <div class="container-md">
+                      <h2 class="text-center mb-5">FAQ</h2>
+
+                      <div class="accordion accordion-flush border-top" id="faqAccordion">
+
+                        <div class="accordion-item border-bottom">
+                          <h2 class="accordion-header" id="headingOne">
+                            <button class="accordion-button fs-4" type="button" data-bs-toggle="collapse"
+                              data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                              Accordion Item #1
+                            </button>
+                          </h2>
+                          <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne"
+                            data-bs-parent="#faqAccordion">
+                            <div class="accordion-body pt-0">
+                              This is the first item's accordion body. It is shown by default, until the
+                              collapse plugin adds the appropriate classes that we use to style each element. These
+                              classes
+                              control the overall appearance, as well as the showing and hiding via CSS transitions. You
+                              can
+                              modify any of this with custom CSS or overriding our default variables. It's also worth
+                              noting
+                              that just about any HTML can go within the .accordion-body, though the transition
+                              does limit overflow.
+                            </div>
+                          </div>
+                        </div>
+
+                        <div class="accordion-item border-bottom">
+                          <h2 class="accordion-header" id="headingTwo">
+                            <button class="accordion-button fs-4 border-0 collapsed" type="button"
+                              data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false"
+                              aria-controls="collapseTwo">
+                              Accordion Item #2
+                            </button>
+                          </h2>
+                          <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
+                            data-bs-parent="#faqAccordion">
+                            <div class="accordion-body pt-0">
+                              This is the second item's accordion body. It is hidden by default, until the
+                              collapse plugin adds the appropriate classes that we use to style each element. These
+                              classes
+                              control the overall appearance, as well as the showing and hiding via CSS transitions. You
+                              can
+                              modify any of this with custom CSS or overriding our default variables. It's also worth
+                              noting
+                              that just about any HTML can go within the .accordion-body, though the transition
+                              does limit overflow.
+                            </div>
+                          </div>
+                        </div>
+
+                        <div class="accordion-item border-bottom">
+                          <h2 class="accordion-header" id="headingThree">
+                            <button class="accordion-button fs-4 border-0 collapsed" type="button"
+                              data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false"
+                              aria-controls="collapseThree">
+                              Accordion Item #3
+                            </button>
+                          </h2>
+                          <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
+                            data-bs-parent="#faqAccordion">
+                            <div class="accordion-body pt-0">
+                              This is the third item's accordion body. It is hidden by default, until the
+                              collapse plugin adds the appropriate classes that we use to style each element. These
+                              classes
+                              control the overall appearance, as well as the showing and hiding via CSS transitions. You
+                              can
+                              modify any of this with custom CSS or overriding our default variables. It's also worth
+                              noting
+                              that just about any HTML can go within the .accordion-body, though the transition
+                              does limit overflow.
+                            </div>
+                          </div>
+                        </div>
+
+                      </div>
+
+                    </div>
+                  </section>
+
+                  <section id="shall-we-waltz" class="container-lg text-center p-5">
+                    <h2 class="text-secondary">Shall We Waltz?</h2>
+                    <p class="text-secondary container-sm mb-4">Connect your crypto wallet to start using the app in
+                      seconds.
+                      No registration needed. Culpa minim ad dolor do.
+                      Do cupidatat eu excepteur tempor officia.</p>
+                    <a href="#" target="_blank" rel="noopener noreferrer" class="btn btn-gradient btn-lg">
+                      Gladly!
+                    </a>
+                  </section>
+
+                  <footer id="page-footer" class="border-top py-5">
+                    <div class="container-xl d-sm-flex justify-content-between">
+                      <div>
+                        <div class="mb-4 text-center text-sm-start">
+                          <!-- <svg class="brand-logo me-4">
+                          <use xlink:href="#brand-logo"></use>
+                        </svg> -->
+                          <span class="text-white fw-bold">LOGO</span>
+                        </div>
+                        <nav class="d-sm-flex fs-6">
+                          <div class="flex-fill">
+                            <p class="text-uppercase text-primary fw-bolder mb-1">General</p>
+                            <ul class="p-0">
+                              <li>
+                                <a href="#">Waltz Economy</a>
+                              </li>
+                              <li>
+                                <a href="#">Blog</a>
+                              </li>
+                              <li>
+                                <a href="#">FAQ</a>
+                              </li>
+                            </ul>
+                          </div>
+                          <div class="flex-fill ms-sm-5">
+                            <p class="text-uppercase text-primary fw-bolder mb-1">Documents</p>
+                            <ul class="p-0">
+                              <li>
+                                <a href="#">Whitepaper</a>
+                              </li>
+                              <li>
+                                <a href="#">Privacy Policy</a>
+                              </li>
+                              <li>
+                                <a href="#">Terms of Use</a>
+                              </li>
+                            </ul>
+                          </div>
+                          <div class="flex-fill ms-sm-5">
+                            <p class="text-uppercase text-primary fw-bolder mb-1">Community</p>
+                            <ul class="p-0">
+                              <li>
+                                <a href="#" target="_blank" rel="noopener noreferrer">Twitter</a>
+                              </li>
+                              <li>
+                                <a href="#" target="_blank" rel="noopener noreferrer">Discord</a>
+                              </li>
+                              <li>
+                                <a href="#" target="_blank" rel="noopener noreferrer">Telegram</a>
+                              </li>
+                              <li>
+                                <a href="#" target="_blank" rel="noopener noreferrer">Github</a>
+                              </li>
+                            </ul>
+                          </div>
+                        </nav>
+                      </div>
+
+                      <div class="position-relative">
+                        <ul class="p-0 social-nav d-flex justify-content-center">
+                          <li>
+                            <a href="#" target="_blank" rel="noopener noreferrer" aria-label="Twitter">
+                              <i class="bi bi-twitter"></i>
+                              <span>Twitter</span>
+                            </a>
+                          </li>
+                          <li>
+                            <a href="#" target="_blank" rel="noopener noreferrer" aria-label="Discord">
+                              <i class="bi bi-discord"></i>
+                              <span>Discord</span>
+                            </a>
+                          </li>
+                          <li>
+                            <a href="#" target="_blank" rel="noopener noreferrer" aria-label="Telegram">
+                              <i class="bi bi-telegram"></i>
+                              <span>Telegram</span>
+                            </a>
+                          </li>
+                          <li>
+                            <a href="#" target="_blank" rel="noopener noreferrer" aria-label="Github">
+                              <i class="bi bi-github"></i>
+                              <span>Github</span>
+                            </a>
+                          </li>
+                        </ul>
+                        <p class="copyright text-nowrap text-center text-sm-start">
+                          © 2021 Waltz. All Rights Reserved.
+                        </p>
+                      </div>
+
+                    </div>
+                  </footer>
+
+                </div>
+              </div><!-- .gradient-bg -->
+
+              <script>
+                // WebFont lazy load
+                var webfonts = document.querySelectorAll(".webfont");
+                webfonts.forEach(function (webfont) {
+                  webfont.rel = "stylesheet";
+                });
+              </script>
+
+              <script>
+                // lazyload
+                document.addEventListener("DOMContentLoaded", function () {
+                  var lazyloadImages;
+
+                  if ("IntersectionObserver" in window) {
+                    lazyloadImages = document.querySelectorAll(".lazy");
+                    var imageObserver = new IntersectionObserver(function (entries, observer) {
+                      entries.forEach(function (entry) {
+                        if (entry.isIntersecting) {
+                          var image = entry.target;
+                          image.classList.remove("lazy");
+                          imageObserver.unobserve(image);
+                        }
+                      });
+                    });
+
+                    lazyloadImages.forEach(function (image) {
+                      imageObserver.observe(image);
+                    });
+                  } else {
+                    var lazyloadThrottleTimeout;
+                    lazyloadImages = document.querySelectorAll(".lazy");
+
+                    function lazyload() {
+                      if (lazyloadThrottleTimeout) {
+                        clearTimeout(lazyloadThrottleTimeout);
+                      }
+
+                      lazyloadThrottleTimeout = setTimeout(function () {
+                        var scrollTop = window.pageYOffset;
+                        lazyloadImages.forEach(function (img) {
+                          if (img.offsetTop < (window.innerHeight + scrollTop)) {
+                            img.src = img.dataset.src;
+                            img.classList.remove('lazy');
+                          }
+                        });
+                        if (lazyloadImages.length == 0) {
+                          document.removeEventListener("scroll", lazyload);
+                          window.removeEventListener("resize", lazyload);
+                          window.removeEventListener("orientationChange", lazyload);
+                        }
+                      }, 20);
+                    }
+
+                    document.addEventListener("scroll", lazyload);
+                    window.addEventListener("resize", lazyload);
+                    window.addEventListener("orientationChange", lazyload);
+                  }
+                })
+              </script>
+
+              <script src="js/modernizr-webp.js"></script>
+          </body>
+
+</html>
