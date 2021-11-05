@@ -66,58 +66,62 @@
           <body>
             <%- include('_svg-defs'); %>
 
-              <header>
-                <div class="container-xl">
-                  <nav class="navbar navbar-expand-lg">
-                    <div class="container-fluid p-0">
-                      <div class="navbar-brand">
-                        <!-- <svg class="brand-logo">
-                          <use xlink:href="#brand-logo"></use>
-                        </svg> -->
-                        <span class="text-secondary fw-bold">LOGO</span>
-                      </div>
-                      <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse"
-                        data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-                        aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
-                      </button>
-                      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                        <ul class="navbar-nav mb-2 mb-lg-0 flex-grow-1 fw-normal">
-                          <li class="nav-item">
-                            <a class="nav-link" href="#economy">Waltz Economy</a>
-                          </li>
-                          <li class="nav-item">
-                            <a class="nav-link" href="#from-the-blog">Blog</a>
-                          </li>
-                          <li class="nav-item">
-                            <a class="nav-link" href="#community">Community</a>
-                          </li>
-                          <li class="nav-item">
-                            <a class="nav-link" href="#faq">FAQ</a>
-                          </li>
-                        </ul>
-                      </div>
-                    </div>
-                  </nav>
-                </div>
-              </header>
+              <div class="hero-bg">
 
-              <section id="hero" class="d-flex align-items-center">
-                <div class="container pt-5">
-                  <div class="hero-inner ps-sm-4 text-center text-sm-start">
-                    <h1 class="mb-3 mb-sm-5">
-                      <span>An Elegant <br></span>
-                      <span>Danceball <br></span>
-                      <span>For All Crypto Users</span>
-                    </h1>
-                    <div class="text-center">
-                      <a href="#" target="_blank" rel="noopener noreferrer" class="btn btn-gradient btn-lg">
-                        Launch App
-                      </a>
+                <header class="pt-sm-2">
+                  <div class="container-xl">
+                    <nav class="navbar navbar-expand-lg">
+                      <div class="container-fluid p-0">
+                        <span class="navbar-brand">
+                          <svg class="brand-logo">
+                            <use xlink:href="#brand-logo-male" class="bland-logo-male"></use>
+                            <use xlink:href="#brand-logo-female" class="bland-logo-female"></use>
+                          </svg>
+                        </span>
+                        <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse"
+                          data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
+                          aria-label="Toggle navigation">
+                          <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div class="collapse navbar-collapse pt-2" id="navbarNav">
+                          <ul class="navbar-nav fw-bolder">
+                            <li class="nav-item">
+                              <a class="nav-link" href="#economy">Waltz Economy</a>
+                            </li>
+                            <li class="nav-item">
+                              <a class="nav-link" href="#from-the-blog">Blog</a>
+                            </li>
+                            <li class="nav-item">
+                              <a class="nav-link" href="#community">Community</a>
+                            </li>
+                            <li class="nav-item">
+                              <a class="nav-link" href="#faq">FAQ</a>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                    </nav>
+                  </div>
+                </header>
+
+                <section id="hero" class="d-flex align-items-center">
+                  <div class="container pt-5">
+                    <div class="hero-inner ps-sm-4 text-center text-sm-start">
+                      <h1 class="mb-3 mb-sm-5">
+                        <span>An Elegant <br></span>
+                        <span>Danceball <br></span>
+                        <span>For All Crypto Users</span>
+                      </h1>
+                      <div class="text-center">
+                        <a href="#" target="_blank" rel="noopener noreferrer" class="btn btn-gradient btn-lg">
+                          Launch App
+                        </a>
+                      </div>
                     </div>
                   </div>
-                </div>
-              </section>
+                </section>
+
+              </div><!-- .hero-bg -->
 
               <section id="economy" class="gradient-bg">
                 <div class="gradient-bg__inner">
@@ -204,7 +208,7 @@
                         </a>
                       </div>
                     </div>
-                    <div class="economy__governance container-lg d-flex border p-5">
+                    <div class="economy__governance container-lg d-flex border p-4 p-sm-5">
                       <div class="me-4">image</div>
                       <div>
                         <h3 class="fs-2">Governance</h3>
@@ -239,14 +243,14 @@
               </section>
 
               <section id="from-the-blog">
-                <h2 class="text-center mb-4 mb-sm-5 text-secondary container-xl pt-5">From the Blog</h2>
+                <h2 class="text-center mb-3 mb-sm-4 text-secondary container-xl pt-5">From the Blog</h2>
                 <p class="text-center container-sm text-secondary">Lorem ipsum dolor sit amet consectetur, adipisicing
                   elit. Ipsa
                   libero labore natus atque, ducimus sed.</p>
                 <ul class="container-xl my-5 blog-post">
 
                   <li>
-                    <a href="#" class="d-block p-4">
+                    <a href="#" class="d-block p-3 p-lg-4">
                       <div class="blog-post__image mb-4">
                         <img loading="lazy" src="images/no-image.jpg" alt="blog post image">
                       </div>
@@ -261,7 +265,7 @@
                   </li>
 
                   <li>
-                    <a href="#" class="d-block p-4">
+                    <a href="#" class="d-block p-3 p-lg-4">
                       <div class="blog-post__image mb-4">
                         <img loading="lazy" src="images/no-image.jpg" alt="blog post image">
                       </div>
@@ -276,7 +280,7 @@
                   </li>
 
                   <li>
-                    <a href="#" class="d-block p-4">
+                    <a href="#" class="d-block p-3 p-lg-4">
                       <div class="blog-post__image mb-4">
                         <img loading="lazy" src="images/no-image.jpg" alt="blog post image">
                       </div>
@@ -420,25 +424,45 @@
                     </div>
                   </section>
 
-                  <section id="shall-we-waltz" class="container-lg text-center p-5">
-                    <h2 class="text-secondary">Shall We Waltz?</h2>
-                    <p class="text-secondary container-sm mb-4">Connect your crypto wallet to start using the app in
-                      seconds.
-                      No registration needed. Culpa minim ad dolor do.
-                      Do cupidatat eu excepteur tempor officia.</p>
-                    <a href="#" target="_blank" rel="noopener noreferrer" class="btn btn-gradient btn-lg">
-                      Gladly!
-                    </a>
+                  <section id="shall-we-waltz" class="container-lg text-center">
+                    <div class="shall-we-waltz__inner p-2">
+                      <div class="d-flex">
+                        <span class="corner-top-left"><img src="images/card-corner.png"></span>
+                        <span class="line-top flex-grow-1"><img src="images/card-line-top.png"></span>
+                        <span class="corner-top-right"><img src="images/card-corner.png"></span>
+                      </div>
+                      <div class="d-flex">
+                        <span class="line-left"><img src="images/card-line-left.png"></span>
+                        <div class="shall-we-waltz__contents w-100">
+                          <h2 class="text-secondary">Shall We Waltz?</h2>
+                          <p class="text-secondary container-sm mb-4">Connect your crypto wallet to start using the
+                            app
+                            in
+                            seconds.
+                            No registration needed. Culpa minim ad dolor do.
+                            Do cupidatat eu excepteur tempor officia.</p>
+                          <a href="#" target="_blank" rel="noopener noreferrer" class="btn btn-gradient btn-lg">
+                            Gladly!
+                          </a>
+                        </div>
+                        <span class="line-right"><img src="images/card-line-right.png"></span>
+                      </div>
+                      <div class="d-flex">
+                        <span class="corner-bottom-left"><img src="images/card-corner.png"></span>
+                        <span class="line-bottom flex-grow-1"><img src="images/card-line-bottom.png"></span>
+                        <span class="corner-bottom-right"><img src="images/card-corner.png"></span>
+                      </div>
+                    </div>
                   </section>
 
                   <footer id="page-footer" class="border-top py-5">
                     <div class="container-xl d-sm-flex justify-content-between">
                       <div>
                         <div class="mb-4 text-center text-sm-start">
-                          <!-- <svg class="brand-logo me-4">
-                          <use xlink:href="#brand-logo"></use>
-                        </svg> -->
-                          <span class="text-white fw-bold">LOGO</span>
+                          <svg class="brand-logo me-4">
+                            <use xlink:href="#brand-logo-male" class="bland-logo-male"></use>
+                            <use xlink:href="#brand-logo-female" class="bland-logo-female"></use>
+                          </svg>
                         </div>
                         <nav class="d-sm-flex fs-6">
                           <div class="flex-fill">
