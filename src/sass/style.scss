@@ -254,10 +254,16 @@ h3 {
   background-repeat: no-repeat;
   background-size: cover;
   height: 100vh;
+  position: relative;
+}
+
+.page-header {
+  position: absolute;
 }
 
 #hero {
-  height: calc(100vh - 70px);
+  height: 100vh;
+  position: absolute;
   h1 {
     background: linear-gradient(
       130deg,
