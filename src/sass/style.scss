@@ -604,15 +604,11 @@ h3 {
     height: calc(52.66px * 1.1);
     position: relative;
     z-index: 9999;
-    @include media-breakpoint-down(sm) {
-      width: calc(150.17px * 0.9);
-      height: calc(52.66px * 0.9);
-    }
     .bland-logo-male {
       fill: $primary;
     }
     .bland-logo-female {
-      fill: $primary;
+      fill: rgba($primary, 0.7);
     }
   }
   nav {
