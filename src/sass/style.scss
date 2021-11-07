@@ -259,6 +259,7 @@ h3 {
 
 .page-header {
   position: absolute;
+  z-index: 1;
 }
 
 #hero {
@@ -543,6 +544,12 @@ h3 {
   margin-bottom: 10rem;
   @include media-breakpoint-down(sm) {
     margin-bottom: 4rem;
+  }
+  h2 {
+    letter-spacing: -0.01rem;
+    @include media-breakpoint-down(sm) {
+      font-size: 2rem;
+    }
   }
   .shall-we-waltz__inner {
     background: #fff;
