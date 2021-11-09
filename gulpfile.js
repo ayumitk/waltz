@@ -1,45 +1,23 @@
-const { src, dest, parallel, watch } = require("gulp");
-const sass = require("gulp-sass")(require("sass"));
-const autoprefixer = require("gulp-autoprefixer");
-const changed = require("gulp-changed");
-const imagemin = require("gulp-imagemin");
-const rename = require("gulp-rename");
-const ejs = require("gulp-ejs");
-const browserSync = require("browser-sync").create();
+let preprocessor = "sass";
 
-const html = () => {
-  return src(["src/ejs/**/*.ejs", "!" + "src/ejs/**/_*.ejs"])
-    .pipe(ejs({}, {}, { ext: ".html" }))
-    .pipe(rename({ extname: ".html" }))
-    .pipe(dest("./docs"))
-    .pipe(browserSync.stream());
-};
+import pkg from "gulp";
+const { src, dest, parallel, series, watch } = pkg;
 
-const CSS = () => {
-  return src("./src/sass/**/*.scss")
-    .pipe(
-      sass({
-        outputStyle: "compressed",
-      }).on("error", sass.logError)
-    )
-    .pipe(autoprefixer({ grid: true }))
-    .pipe(dest("./docs/css"));
-};
+import browserSync from "browser-sync";
+import gulpSass from "gulp-sass";
+import dartSass from "sass";
+import sassglob from "gulp-sass-glob";
+const sass = gulpSass(dartSass);
+import postCss from "gulp-postcss";
+import cssnano from "cssnano";
+import autoprefixer from "autoprefixer";
+import imagemin from "gulp-imagemin";
+import changed from "gulp-changed";
+import concat from "gulp-concat";
+import ejs from "gulp-ejs";
+import rename from "gulp-rename";
 
-const image = () => {
-  return src("./src/images/**/*.+(jpg|png|gif)")
-    .pipe(changed("./docs/images"))
-    .pipe(
-      imagemin([
-        imagemin.gifsicle({ interlaced: true }),
-        imagemin.mozjpeg({ quality: 75, progressive: true }),
-        imagemin.optipng({ optimizationLevel: 5 }),
-      ])
-    )
-    .pipe(dest("./docs/images"));
-};
-
-const watchFiles = () => {
+function browsersync() {
   browserSync.init({
     server: {
       baseDir: "./docs",
@@ -47,14 +25,52 @@ const watchFiles = () => {
     open: "external",
     host: "192.168.0.24",
   });
-  watch("./src/sass/**/*.scss", CSS);
-  watch("./src/images/**/*.+(jpg|png|gif)", image);
-  watch("./src/ejs/**/*.ejs", html);
-  watch("./docs/**/*").on("change", browserSync.reload);
-};
+}
 
-exports.html = html;
-exports.CSS = CSS;
-exports.image = image;
-exports.watchFiles = watchFiles;
-exports.default = parallel(html, CSS, image, watchFiles);
+function styles() {
+  return src([`./src/${preprocessor}/*.*`, `!./src/${preprocessor}/_*.*`])
+    .pipe(eval(`${preprocessor}glob`)())
+    .pipe(eval(preprocessor)({ "include css": true }))
+    .pipe(
+      postCss([
+        autoprefixer({ grid: "true" }),
+        cssnano({
+          preset: ["default", { discardComments: { removeAll: true } }],
+        }),
+      ])
+    )
+    .pipe(concat("style.min.css"))
+    .pipe(dest("./docs/css"))
+    .pipe(browserSync.stream());
+}
+
+function images() {
+  return src(["./src/images/**/*"])
+    .pipe(changed("./docs/images"))
+    .pipe(imagemin())
+    .pipe(dest("./docs/images"))
+    .pipe(browserSync.stream());
+}
+
+function buildhtml() {
+  return src(["./src/ejs/**/*.ejs", "!" + "./src/ejs/**/_*.ejs"])
+    .pipe(ejs({}, {}, { ext: ".html" }))
+    .pipe(rename({ extname: ".html" }))
+    .pipe(dest("./docs"))
+    .pipe(browserSync.stream());
+}
+
+function startwatch() {
+  watch(`./src/${preprocessor}/**/*`, { usePolling: true }, styles);
+  watch("./src/images/**/*", { usePolling: true }, images);
+  watch("./src/ejs/**/*", { usePolling: true }, buildhtml);
+  watch("./docs/**/*", { usePolling: true }).on("change", browserSync.reload);
+}
+
+export { styles, images, buildhtml };
+export default series(
+  styles,
+  images,
+  buildhtml,
+  parallel(browsersync, startwatch)
+);
