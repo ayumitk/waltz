@@ -119,9 +119,16 @@
                       </div>
                     </div>
                   </div>
+                  <!-- <div class="dance">
+                    <img src="images/dance-1.png" class="dance-image-1">
+                    <img src="images/dance-2.png" class="dance-image-2">
+                    <img src="images/dance-3.png" class="dance-image-3">
+                    <img src="images/dance-4.png" class="dance-image-4">
+                  </div> -->
                 </section>
 
               </div><!-- .hero-bg -->
+
 
               <section id="economy" class="gradient-bg">
                 <div class="gradient-bg__inner">
@@ -135,13 +142,54 @@
                   <div class="container-xl">
 
                     <h2 class="text-center mb-5">Three Steps in Waltz Economy</h2>
-                    <div class="text-center economy__image">
-                      <picture>
-                        <source srcset="images/waltz-economy.webp" type="image/webp">
-                        <source srcset="images/waltz-economy.png" type="image/png">
-                        <img loading="lazy" src="images/waltz-economy.png" alt="Three Steps in Waltz Economy image">
-                      </picture>
+
+
+                    <div class="parent-bg d-flex align-items-center">
+                      <div id="parent" class="m-auto">
+                        <div id="child-1" class="child">
+                          <picture>
+                            <source srcset="images/child-1.webp" type="image/webp">
+                            <source srcset="images/child-1.png" type="image/png">
+                            <img loading="lazy" src="images/child-1.png" alt="Crypto Traders image">
+                          </picture>
+                        </div>
+                        <div id="child-2" class="child">
+                          <picture>
+                            <source srcset="images/child-2.webp" type="image/webp">
+                            <source srcset="images/child-2.png" type="image/png">
+                            <img loading="lazy" src="images/child-2.png" alt="DeFi Farmers image">
+                          </picture>
+                        </div>
+                        <div id="child-3" class="child">
+                          <picture>
+                            <source srcset="images/child-3.webp" type="image/webp">
+                            <source srcset="images/child-3.png" type="image/png">
+                            <img loading="lazy" src="images/child-3.png" alt="ETH HODLer image">
+                          </picture>
+                        </div>
+                      </div>
                     </div>
+
+                    <script>
+                      let _CURRENT_ANGLE = 0;
+                      const parent = document.querySelector('#parent');
+                      const child1 = document.querySelector('#child-1');
+                      const child2 = document.querySelector('#child-2');
+                      const child3 = document.querySelector('#child-3');
+                      const observer = new IntersectionObserver((entries) => {
+                        for (const e of entries) {
+                          if (e.isIntersecting) {
+                            _CURRENT_ANGLE += 120;
+                            parent.style.transform = 'rotate(' + _CURRENT_ANGLE + 'deg)';
+                            child1.style.transform = 'rotate(' + '-' + _CURRENT_ANGLE + 'deg)';
+                            child2.style.transform = 'rotate(' + '-' + _CURRENT_ANGLE + 'deg)';
+                            child3.style.transform = 'rotate(' + '-' + _CURRENT_ANGLE + 'deg)';
+                          }
+                        }
+                      });
+                      observer.observe(document.getElementById('parent'))
+                    </script>
+
                     <div class="economy__three-features">
                       <div>
                         <div class="mb-4">
