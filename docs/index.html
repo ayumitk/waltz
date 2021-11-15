@@ -206,18 +206,21 @@
                       const child1 = document.querySelector('#child-1');
                       const child2 = document.querySelector('#child-2');
                       const child3 = document.querySelector('#child-3');
-                      const observer = new IntersectionObserver((entries) => {
-                        for (const e of entries) {
-                          if (e.isIntersecting) {
-                            _CURRENT_ANGLE += 120;
-                            parent.style.transform = 'rotate(' + _CURRENT_ANGLE + 'deg)';
-                            child1.style.transform = 'rotate(' + '-' + _CURRENT_ANGLE + 'deg)';
-                            child2.style.transform = 'rotate(' + '-' + _CURRENT_ANGLE + 'deg)';
-                            child3.style.transform = 'rotate(' + '-' + _CURRENT_ANGLE + 'deg)';
+
+                      if ("IntersectionObserver" in window) {
+                        const circleObserver = new IntersectionObserver((entries) => {
+                          for (const e of entries) {
+                            if (e.isIntersecting) {
+                              _CURRENT_ANGLE += 120;
+                              parent.style.transform = 'rotate(' + _CURRENT_ANGLE + 'deg)';
+                              child1.style.transform = 'rotate(' + '-' + _CURRENT_ANGLE + 'deg)';
+                              child2.style.transform = 'rotate(' + '-' + _CURRENT_ANGLE + 'deg)';
+                              child3.style.transform = 'rotate(' + '-' + _CURRENT_ANGLE + 'deg)';
+                            }
                           }
-                        }
-                      });
-                      observer.observe(document.getElementById('parent'))
+                        });
+                        circleObserver.observe(parent);
+                      }
                     </script>
 
                     <div class="economy__three-features">
@@ -307,19 +310,61 @@
                   <dl class="container-lg status-container mb-0 lh-1">
                     <div class="d-flex flex-column text-center">
                       <dt class="order-2 fw-normal text-white fs-5">Unique users</dt>
-                      <dd class="order-1 text-primary mb-3">135,442</dd>
+                      <dd class="order-1 text-primary mb-3 counter" data-target="135442">0</dd>
                     </div>
                     <div class="d-flex flex-column text-center">
                       <dt class="order-2 fw-normal text-white fs-5">Unique users</dt>
-                      <dd class="order-1 text-primary mb-3">24,937</dd>
+                      <dd class="order-1 text-primary mb-3 counter" data-target="24937">0</dd>
                     </div>
                     <div class="d-flex flex-column text-center">
                       <dt class="order-2 fw-normal text-white fs-5">Unique users</dt>
-                      <dd class="order-1 text-primary mb-3">24,937</dd>
+                      <dd class="order-1 text-primary mb-3 counter" data-target="7239">0</dd>
                     </div>
                   </dl>
                 </div>
               </section>
+
+              <script>
+                function counterAnimationHandler() {
+                  const counters = document.querySelectorAll('.counter')
+                  counters.forEach(counter => {
+                    counter.innerText = '0';
+                    counter.dataset.count = 0;
+                    const updateCounter = () => {
+                      const target = +counter.getAttribute('data-target');
+                      const count = +counter.dataset.count;
+                      const increment = target / 200;
+                      if (count < target) {
+                        const newCount = Math.ceil(count + increment);
+                        counter.dataset.count = newCount;
+                        counter.innerText = numberWithCommas(newCount);
+                        setTimeout(updateCounter, 1);
+                      } else {
+                        counter.innerText = numberWithCommas(target);
+                      }
+                    }
+                    updateCounter();
+                  })
+
+                  function numberWithCommas(x) {
+                    return x.toFixed().replace(/(\d)(?=(\d{3})+$)/g, "$1,");
+                  }
+                }
+
+                if ("IntersectionObserver" in window) {
+                  let first = true;
+                  const status = document.querySelector('#status');
+                  const counterObserver = new IntersectionObserver((entries) => {
+                    for (const e of entries) {
+                      if (e.isIntersecting && first) {
+                        counterAnimationHandler();
+                        first = false;
+                      }
+                    }
+                  });
+                  counterObserver.observe(status);
+                }
+              </script>
 
               <section id="from-the-blog">
                 <h2 class="text-center mb-3 mb-sm-4 text-secondary container-xl pt-5">From the Blog</h2>
@@ -664,58 +709,6 @@
                 webfonts.forEach(function (webfont) {
                   webfont.rel = "stylesheet";
                 });
-              </script>
-
-              <script>
-                // lazyload
-                document.addEventListener("DOMContentLoaded", function () {
-                  var lazyloadImages;
-
-                  if ("IntersectionObserver" in window) {
-                    lazyloadImages = document.querySelectorAll(".lazy");
-                    var imageObserver = new IntersectionObserver(function (entries, observer) {
-                      entries.forEach(function (entry) {
-                        if (entry.isIntersecting) {
-                          var image = entry.target;
-                          image.classList.remove("lazy");
-                          imageObserver.unobserve(image);
-                        }
-                      });
-                    });
-
-                    lazyloadImages.forEach(function (image) {
-                      imageObserver.observe(image);
-                    });
-                  } else {
-                    var lazyloadThrottleTimeout;
-                    lazyloadImages = document.querySelectorAll(".lazy");
-
-                    function lazyload() {
-                      if (lazyloadThrottleTimeout) {
-                        clearTimeout(lazyloadThrottleTimeout);
-                      }
-
-                      lazyloadThrottleTimeout = setTimeout(function () {
-                        var scrollTop = window.pageYOffset;
-                        lazyloadImages.forEach(function (img) {
-                          if (img.offsetTop < (window.innerHeight + scrollTop)) {
-                            img.src = img.dataset.src;
-                            img.classList.remove('lazy');
-                          }
-                        });
-                        if (lazyloadImages.length == 0) {
-                          document.removeEventListener("scroll", lazyload);
-                          window.removeEventListener("resize", lazyload);
-                          window.removeEventListener("orientationChange", lazyload);
-                        }
-                      }, 20);
-                    }
-
-                    document.addEventListener("scroll", lazyload);
-                    window.addEventListener("resize", lazyload);
-                    window.addEventListener("orientationChange", lazyload);
-                  }
-                })
               </script>
 
               <script src="js/modernizr-webp.js"></script>
