@@ -34,6 +34,7 @@
               <%= title %> - <%= tagline %>
             </title>
             <meta name="description" content="<%= description %>">
+            <link rel="canonical" href="<%= url %>">
 
             <!-- Open Graph Tags -->
             <meta property="og:title" content="<%= title %> - <%= tagline %>" />
@@ -150,21 +151,24 @@
                           <picture>
                             <source srcset="images/child-1.webp" type="image/webp">
                             <source srcset="images/child-1.png" type="image/png">
-                            <img loading="lazy" src="images/child-1.png" alt="Crypto Traders image">
+                            <img loading="lazy" src="images/child-1.png" alt="Crypto Traders image" width="350"
+                              height="350" title="Crypto Traders image">
                           </picture>
                         </div>
                         <div id="child-2" class="child">
                           <picture>
                             <source srcset="images/child-2.webp" type="image/webp">
                             <source srcset="images/child-2.png" type="image/png">
-                            <img loading="lazy" src="images/child-2.png" alt="DeFi Farmers image">
+                            <img loading="lazy" src="images/child-2.png" alt="DeFi Farmers image" width="350"
+                              height="350" title="DeFi Farmers image">
                           </picture>
                         </div>
                         <div id="child-3" class="child">
                           <picture>
                             <source srcset="images/child-3.webp" type="image/webp">
                             <source srcset="images/child-3.png" type="image/png">
-                            <img loading="lazy" src="images/child-3.png" alt="ETH HODLer image">
+                            <img loading="lazy" src="images/child-3.png" alt="ETH HODLer image" width="350" height="350"
+                              title="ETH HODLer image">
                           </picture>
                         </div>
                       </div>
@@ -195,12 +199,12 @@
 
                     <div class="economy__three-features">
                       <div>
-                        <div class="mb-4">
+                        <div class="mb-4 text-center">
                           <picture>
                             <source srcset="images/for-crypto-traders.webp" type="image/webp">
                             <source srcset="images/for-crypto-traders.png" type="image/png">
                             <img loading="lazy" src="images/for-crypto-traders.webp" alt="For Crypto Traders image"
-                              class="w-100">
+                              class="w-100" width="340" height="184" title="For Crypto Traders image">
                           </picture>
                         </div>
                         <h3 class="border-bottom pb-3 mb-3 fs-2">
@@ -219,12 +223,12 @@
                         </a>
                       </div>
                       <div>
-                        <div class="mb-4">
+                        <div class="mb-4 text-center">
                           <picture>
                             <source srcset="images/for-defi-farmers.webp" type="image/webp">
                             <source srcset="images/for-defi-farmers.png" type="image/png">
                             <img loading="lazy" src="images/for-defi-farmers.png" alt="For DeFi Farmers image"
-                              class="w-100">
+                              class="w-100" width="340" height="184" title="For DeFi Farmers image">
                           </picture>
                         </div>
                         <h3 class="border-bottom pb-3 mb-3 fs-2">
@@ -239,12 +243,12 @@
                         </a>
                       </div>
                       <div>
-                        <div class="mb-4">
+                        <div class="mb-4 text-center">
                           <picture>
                             <source srcset="images/for-etj-hodler.webp" type="image/webp">
                             <source srcset="images/for-etj-hodler.png" type="image/png">
-                            <img loading="lazy" src="images/for-etj-hodler.png" alt="For ETH HODLer image"
-                              class="w-100">
+                            <img loading="lazy" src="images/for-etj-hodler.png" alt="For ETH HODLer image" class="w-100"
+                              width="340" height="184" title="For ETH HODLer image">
                           </picture>
                         </div>
                         <h3 class="border-bottom pb-3 mb-3 fs-2">
@@ -260,8 +264,10 @@
                       </div>
                     </div>
                     <div class="economy__governance container-lg d-sm-flex border p-4 p-sm-5">
-                      <div class="me-sm-4 px-sm-3 px-lg-5 text-center py-2 py-sm-0 mb-3 mb-sm-0"><img
-                          src="images/governance-logo.svg" alt="Governance image"></div>
+                      <div class="me-sm-4 px-sm-3 px-lg-5 text-center py-2 py-sm-0 mb-3 mb-sm-0">
+                        <img loading="lazy" src="images/governance-logo.svg" alt="Governance image" width="101"
+                          height="153" title="Governance image">
+                      </div>
                       <div>
                         <h3 class="fs-2">Governance</h3>
                         <p>Important aspects such as the parameter or the interests and the interest rate of the fixed
@@ -349,7 +355,8 @@
                         <picture>
                           <source srcset="images/no-image.webp" type="image/webp">
                           <source srcset="images/no-image.jpg" type="image/jpg">
-                          <img loading="lazy" src="images/no-image.jpg" alt="Blog post thumbnail image">
+                          <img loading="lazy" src="images/no-image.jpg" alt="Blog post thumbnail image" width="600"
+                            height="315" class="w-100 h-auto" title="Blog post thumbnail image">
                         </picture>
                       </div>
                       <h3 class="fs-5 text-secondary fw-bold">Boost your conversion rate</h3>
@@ -368,7 +375,8 @@
                         <picture>
                           <source srcset="images/no-image.webp" type="image/webp">
                           <source srcset="images/no-image.jpg" type="image/jpg">
-                          <img loading="lazy" src="images/no-image.jpg" alt="Blog post thumbnail image">
+                          <img loading="lazy" src="images/no-image.jpg" alt="Blog post thumbnail image" width="600"
+                            height="315" class="w-100 h-auto" title="Blog post thumbnail image">
                         </picture>
                       </div>
                       <h3 class="fs-5 text-secondary fw-bold">Boost your conversion rate</h3>
@@ -387,7 +395,8 @@
                         <picture>
                           <source srcset="images/no-image.webp" type="image/webp">
                           <source srcset="images/no-image.jpg" type="image/jpg">
-                          <img loading="lazy" src="images/no-image.jpg" alt="Blog post thumbnail image">
+                          <img loading="lazy" src="images/no-image.jpg" alt="Blog post thumbnail image" width="600"
+                            height="315" class="w-100 h-auto" title="Blog post thumbnail image">
                         </picture>
                       </div>
                       <h3 class="fs-5 text-secondary fw-bold">Boost your conversion rate</h3>
@@ -534,18 +543,22 @@
                     <div class="shall-we-waltz__inner p-2">
                       <div class="d-flex">
                         <span class="corner-top-left">
-                          <img src="images/card-corner.png" alt="Invitation card image">
+                          <img loading="lazy" src="images/card-corner.png" alt="Invitation card image" width="128"
+                            height="128" title="Invitation card image">
                         </span>
                         <span class="line-top flex-grow-1">
-                          <img src="images/card-line-top.png" alt="Invitation card image">
+                          <img loading="lazy" src="images/card-line-top.png" alt="Invitation card image" width="128"
+                            height="128" class="w-100" title="Invitation card image">
                         </span>
                         <span class="corner-top-right">
-                          <img src="images/card-corner.png" alt="Invitation card image">
+                          <img loading="lazy" src="images/card-corner.png" alt="Invitation card image" width="128"
+                            height="128" title="Invitation card image">
                         </span>
                       </div>
                       <div class="d-flex">
                         <span class="line-left">
-                          <img src="images/card-line-left.png" alt="Invitation card image">
+                          <img loading="lazy" src="images/card-line-left.png" alt="Invitation card image" width="128"
+                            height="128" class="h-100" title="Invitation card image">
                         </span>
                         <div class="shall-we-waltz__contents w-100">
                           <h2 class="text-secondary">Shall We Waltz?</h2>
@@ -560,18 +573,22 @@
                           </a>
                         </div>
                         <span class="line-right">
-                          <img src="images/card-line-right.png" alt="Invitation card image">
+                          <img loading="lazy" src="images/card-line-right.png" alt="Invitation card image" width="128"
+                            height="128" class="h-100" title="Invitation card image">
                         </span>
                       </div>
                       <div class="d-flex">
                         <span class="corner-bottom-left">
-                          <img src="images/card-corner.png" alt="Invitation card image">
+                          <img loading="lazy" src="images/card-corner.png" alt="Invitation card image" width="128"
+                            height="128" title="Invitation card image">
                         </span>
                         <span class="line-bottom flex-grow-1">
-                          <img src="images/card-line-bottom.png" alt="Invitation card image">
+                          <img loading="lazy" src="images/card-line-bottom.png" alt="Invitation card image" width="128"
+                            height="128" class="w-100" title="Invitation card image">
                         </span>
                         <span class="corner-bottom-right">
-                          <img src="images/card-corner.png" alt="Invitation card image">
+                          <img loading="lazy" src="images/card-corner.png" alt="Invitation card image" width="128"
+                            height="128" title="Invitation card image">
                         </span>
                       </div>
                     </div>
