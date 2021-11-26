@@ -253,6 +253,7 @@ h3 {
 .hero-bg {
   background-repeat: no-repeat;
   background-size: cover;
+  background-position: center center;
   height: 100vh;
   position: relative;
 }
@@ -265,6 +266,30 @@ h3 {
 #hero {
   height: 100vh;
   position: absolute;
+  @media (orientation: landscape) {
+    align-items: center;
+  }
+  @media (orientation: portrait) {
+    align-items: end;
+  }
+  .hero-inner {
+    @media (orientation: landscape) {
+      text-align: left;
+    }
+    @media (orientation: portrait) {
+      text-align: center;
+    }
+  }
+  .container {
+    max-width: 1320px !important;
+    z-index: 1;
+    @media (orientation: landscape) {
+      padding-top: 3rem;
+    }
+    @media (orientation: portrait) {
+      padding-bottom: 3rem;
+    }
+  }
   h1 {
     background: linear-gradient(
       130deg,
@@ -673,15 +698,36 @@ h3 {
 }
 
 .dance {
-  position: relative;
+  position: absolute;
+  left: -20px;
+  right: -20px;
+  top: 0;
+  .dance-inner {
+    position: relative;
+    @media (orientation: landscape) {
+      max-width: 640px;
+      width: 100%;
+      height: 100vh;
+      float: right;
+    }
+    @media (orientation: portrait) {
+      margin: 50px auto 0 auto;
+      width: 80vw;
+      @include media-breakpoint-down(sm) {
+        width: 100vw;
+      }
+    }
+  }
   img {
+    width: 100%;
+    height: auto;
     position: absolute;
     opacity: 0;
     top: 0;
     right: 0;
-    animation-duration: 3s;
+    animation-duration: 3.4s;
     animation-iteration-count: infinite;
-    animation-timing-function: steps(1, end);
+    animation-timing-function: ease-in-out;
   }
   .dance-image-1 {
     animation-name: animation1;
@@ -829,13 +875,5 @@ h3 {
   left: -15vw;
   @media only screen and (min-width: 958px) {
     left: -175px;
-  }
-}
-
-.test {
-  background-color: rgba(255, 255, 255, 0.1);
-  color: #fff;
-  div {
-    display: none;
   }
 }
