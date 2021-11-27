@@ -22,8 +22,8 @@ function browsersync() {
     server: {
       baseDir: "./docs",
     },
-    // open: "external",
-    // host: "192.168.0.24",
+    open: "external",
+    host: "192.168.0.20",
   });
 }
 
